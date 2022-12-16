@@ -33,6 +33,7 @@ class phoneDetailInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         self.title = "Phone Detail Information"
+        
         super.viewDidLoad()
         loadTableView()
         startUptimeTimer()
