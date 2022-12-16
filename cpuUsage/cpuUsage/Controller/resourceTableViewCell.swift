@@ -8,6 +8,14 @@
 import UIKit
 
 class resourceTableViewCell: UITableViewCell {
-    @IBOutlet weak var resourceFieldText: UILabel!
-    @IBOutlet weak var resourceDataText: UILabel!
+    @IBOutlet weak var resourceFieldText: UILabel! {
+        didSet {
+            resourceFieldText.textColor = .white
+        }
+    }
+    @IBOutlet weak var resourceDataText: UILabel! {
+        didSet {
+            resourceDataText.textColor = .white
+        }
+    }
 }

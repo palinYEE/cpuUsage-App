@@ -67,6 +67,7 @@ extension phoneDetailInfoViewController: UITableViewDelegate, UITableViewDataSou
         case 3:
             cell.field.text = "UUID"
             cell.Data.text = self.phoneDetailData.uuid
+            cell.Data.text = ""
             break
         case 4:
             cell.field.text = "CPU Core Usage (active/total)"

@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,22 +16,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YYJ CPU MONITORING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="455-CQ-YH4">
-                                <rect key="frame" x="61" y="211" width="268.33333333333331" height="30"/>
+                                <rect key="frame" x="60.666666666666657" y="211" width="268.33333333333337" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iRS-yG-mGh">
-                                <rect key="frame" x="0.0" y="341" width="390" height="477"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="341" width="389.66666666666669" height="477"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="resourceTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="resourceTableViewCell" id="R4p-OY-x0W" customClass="resourceTableViewCell" customModule="cpuUsage" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="390" height="61.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="50" width="389.66666666666669" height="61.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R4p-OY-x0W" id="JMJ-Xz-eYw">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="61.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="389.66666666666669" height="61.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qW-Lp-ANS">
@@ -42,7 +42,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rrY-aL-hGF">
-                                                    <rect key="frame" x="328" y="20" width="42" height="21.333333333333329"/>
+                                                    <rect key="frame" x="327.66666666666669" y="20" width="42" height="21.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -58,6 +58,7 @@
                                                 <constraint firstItem="rrY-aL-hGF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1qW-Lp-ANS" secondAttribute="trailing" constant="50" id="rMN-LM-Dlf"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="resourceDataText" destination="rrY-aL-hGF" id="JYq-71-jhE"/>
                                             <outlet property="resourceFieldText" destination="1qW-Lp-ANS" id="p1P-bN-TIT"/>
@@ -66,7 +67,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqi-tI-l60">
-                                <rect key="frame" x="0.0" y="298" width="76" height="43"/>
+                                <rect key="frame" x="0.0" y="298" width="75.666666666666671" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="76" id="DM4-7s-hSA"/>
                                 </constraints>
@@ -77,7 +78,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f48-01-77P">
-                                <rect key="frame" x="322" y="298" width="68" height="43"/>
+                                <rect key="frame" x="321.66666666666669" y="298" width="68" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="68" id="g5V-7t-p5Q"/>
                                 </constraints>
@@ -127,7 +128,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wOR-ne-OKB">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="phoneDetailTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="phoneDetailTableViewCell" id="DYc-UN-Mu7" customClass="phoneDetailTableViewCell" customModule="cpuUsage" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="55.333332061767578"/>
@@ -159,6 +160,7 @@
                                                 <constraint firstItem="NGM-W4-R7Q" firstAttribute="top" secondItem="dOv-yh-6U1" secondAttribute="top" constant="20" id="wxE-yE-aCK"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="Data" destination="NGM-W4-R7Q" id="Bz0-d4-kiy"/>
                                             <outlet property="field" destination="GWW-sz-kQh" id="GRP-D4-RDy"/>
@@ -212,9 +214,4 @@
             <point key="canvasLocation" x="139.69465648854961" y="-2.1126760563380285"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

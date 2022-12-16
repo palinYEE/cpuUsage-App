@@ -8,6 +8,14 @@
 import UIKit
 
 class phoneDetailTableViewCell: UITableViewCell {
-    @IBOutlet weak var Data: UILabel!
-    @IBOutlet weak var field: UILabel!
+    @IBOutlet weak var Data: UILabel! {
+        didSet {
+            Data.textColor = .white
+        }
+    }
+    @IBOutlet weak var field: UILabel! {
+        didSet {
+            field.textColor = .white
+        }
+    }
 }
