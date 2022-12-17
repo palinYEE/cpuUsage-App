@@ -112,7 +112,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadTableView()
-        getIpAddress()
         // Do any additional setup after loading the view.
     }
 

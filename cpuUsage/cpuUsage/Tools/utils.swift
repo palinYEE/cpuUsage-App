@@ -32,7 +32,9 @@ func showToast(_ viewController:UIViewController, _ message: String, _ font: UIF
     })
 }
 
-func getIpAddress() -> String? {
+func getIpAddress() -> [interfaceInfo]? {
+    var result: [interfaceInfo] = []
+    
     var address: String?
     
     var ifaddr: UnsafeMutablePointer<ifaddrs>?
@@ -53,9 +55,18 @@ func getIpAddress() -> String? {
                         &hostname, socklen_t(hostname.count),
                         nil, socklen_t(0), NI_NUMERICHOST)
             address = String(cString: hostname)
-            print(name, address)
+            
+//            print(name, type(of: name), address, type(of: address))
+            
+            /* ipv4 */
+            if addrFamily == UInt8(AF_INET) {
+                result.append(.init(interfaceName: name, ipv4:address, existIPv4: true, existIPv6: false))
+            } else {    /* ipv6 */
+                result.append(.init(interfaceName: name,ipv6:address , existIPv4: false, existIPv6: true))
+            }
+            
         }
     }
     freeifaddrs(ifaddr)
-    return ""
+    return result
 }
