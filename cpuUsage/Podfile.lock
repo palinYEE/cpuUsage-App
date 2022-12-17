@@ -1,0 +1,16 @@
+PODS:
+  - NetUtils (4.2.1)
+
+DEPENDENCIES:
+  - NetUtils (~> 4.2)
+
+SPEC REPOS:
+  trunk:
+    - NetUtils
+
+SPEC CHECKSUMS:
+  NetUtils: 6fa9e2d1d58275161209d819128e3b30c42d98ba
+
+PODFILE CHECKSUM: 3a20059f0650a9da7c4de03c7a5e80adc52559ed
+
+COCOAPODS: 1.11.3
