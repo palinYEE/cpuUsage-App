@@ -40,9 +40,6 @@ func getIpAddress() -> interfaceDatas? {
     guard getifaddrs(&ifaddr) == 0 else { return nil }
     guard let firstAddr = ifaddr else { return nil }
     
-    print("===================")
-    print("* getIpAddress TEST ")
-    
     for ifptr in sequence(first: firstAddr, next: { $0.pointee.ifa_next }) {
         let interface = ifptr.pointee
         let addrFamily = interface.ifa_addr.pointee.sa_family

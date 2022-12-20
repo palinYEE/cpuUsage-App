@@ -52,19 +52,6 @@ extension networkViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         /* TEST */
-        if !self.multiTableViewFlagTest {
-            self.multiTableViewFlagTest = true
-            tableView.beginUpdates()
-            tableView.insertRows(at:[IndexPath(row: indexPath.row + 1, section: 0)], with: .left)
-            tableView.endUpdates()
-        } else {
-            self.multiTableViewFlagTest = false
-            tableView.beginUpdates()
-            tableView.deleteRows(at:[IndexPath(row: indexPath.row + 1, section: 0)], with: .right)
-            tableView.endUpdates()
-            
-        }
-        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     
