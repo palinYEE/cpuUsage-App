@@ -32,9 +32,8 @@ func showToast(_ viewController:UIViewController, _ message: String, _ font: UIF
     })
 }
 
-func getIpAddress() -> [interfaceInfo]? {
-    var result: [interfaceInfo] = []
-    
+func getIpAddress() -> interfaceDatas? {
+    var result: interfaceDatas = .init(count: 0, data: [])
     var address: String?
     
     var ifaddr: UnsafeMutablePointer<ifaddrs>?
@@ -56,15 +55,29 @@ func getIpAddress() -> [interfaceInfo]? {
                         nil, socklen_t(0), NI_NUMERICHOST)
             address = String(cString: hostname)
             
-//            print(name, type(of: name), address, type(of: address))
-            
+            result.count += 1
             /* ipv4 */
             if addrFamily == UInt8(AF_INET) {
-                result.append(.init(interfaceName: name, ipv4:address, existIPv4: true, existIPv6: false))
+                let tmpIpv4: interfaceInfo = .init(ipv4: address, existIPv4: true, existIPv6: false)
+                if result.data.filter({ $0.interfaceName == name }).count > 0 {
+                    result.data[result.data.firstIndex(where: {
+                        $0.interfaceName == name
+                    })!].interface.append(tmpIpv4)
+                } else {
+                    let tmp: interfaceData = .init(interfaceName: name, interface: [tmpIpv4])
+                    result.data.append(tmp)
+                }
             } else {    /* ipv6 */
-                result.append(.init(interfaceName: name,ipv6:address , existIPv4: false, existIPv6: true))
+                let tmpIpv6: interfaceInfo = .init(ipv6: address,existIPv4: false, existIPv6: true)
+                if result.data.filter({ $0.interfaceName == name }).count > 0 {
+                    result.data[result.data.firstIndex(where: {
+                        $0.interfaceName == name
+                    })!].interface.append(tmpIpv6)
+                } else {
+                    let tmp: interfaceData = .init(interfaceName: name, interface: [tmpIpv6])
+                    result.data.append(tmp)
+                }
             }
-            
         }
     }
     freeifaddrs(ifaddr)

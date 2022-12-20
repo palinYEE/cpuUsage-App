@@ -8,6 +8,14 @@
 import UIKit
 
 class networkTableViewCell: UITableViewCell {
-    @IBOutlet weak var data: UILabel!
-    @IBOutlet weak var field: UILabel!
+    @IBOutlet weak var networkData: UILabel! {
+        didSet {
+            networkData.textColor = .white
+        }
+    }
+    @IBOutlet weak var networkField: UILabel! {
+        didSet {
+            networkField.textColor = .white
+        }
+    }
 }
