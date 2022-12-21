@@ -116,7 +116,6 @@ extension networkViewController: UITableViewDelegate, UITableViewDataSource {
                 tableView.endUpdates()
             } else {
                 level2.isExpended = false
-                let element = self.tableViewInterfaceData[row + 1]
                 for i in 0..<level2.interface.count {
                     self.tableViewInterfaceData.remove(at: row + 1)
                     let ip = IndexPath(row: row + i + 1, section: 0)
