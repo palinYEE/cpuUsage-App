@@ -10,3 +10,5 @@
 * `timer` 등록 방법
 * `UIDecive`, `ProcessInfo` 를 통한 디바이스 정보 습득
 * `subView` 를 이용한 toast message 출력 
+* `multi level tableViewCell` 구현
+* `getifaddrs`을 이용한 인터페이스 정보 추출
