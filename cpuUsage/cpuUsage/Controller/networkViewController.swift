@@ -20,6 +20,7 @@ class networkViewController: UIViewController {
     }
 
     override func viewDidLoad() {
+        self.title = "Network Information"
         self.interfaceInfoData = getIpAddress()
         self.tableViewInterfaceData.append(self.interfaceInfoData as Any)
         if interfaceInfoData == nil {

@@ -114,6 +114,8 @@
                     <navigationItem key="navigationItem" id="K41-Gi-DO8"/>
                     <connections>
                         <outlet property="monitorTableView" destination="iRS-yG-mGh" id="PFK-JU-BSn"/>
+                        <outlet property="startButton" destination="Xqi-tI-l60" id="kDV-dh-duO"/>
+                        <outlet property="stopButton" destination="f48-01-77P" id="sut-Ck-D8c"/>
                         <segue destination="QRc-8Z-fVH" kind="show" identifier="detailPhoneInfo" id="sJ1-cL-qYg"/>
                     </connections>
                 </viewController>

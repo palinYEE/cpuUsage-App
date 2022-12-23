@@ -17,11 +17,27 @@ class ViewController: UIViewController {
     var timer: Timer?
     var timerNum: Int = 0
     
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    
+    fileprivate var startButtonFlag: Bool = false   // start 버튼을 아직 클릭하지 않음을 의미
+    
     fileprivate func loadTableView() {
         self.monitorTableView.dataSource = self
         self.monitorTableView.delegate = self
     }
     
+    fileprivate func cpuButtonFlagChange() {
+        if !self.startButtonFlag {
+            self.startButtonFlag = true
+            self.startButton.isEnabled = true
+            self.stopButton.isEnabled = false
+        } else {
+            self.startButtonFlag = false
+            self.startButton.isEnabled = false
+            self.stopButton.isEnabled = true
+        }
+    }
     
     func Output_Alert(title : String, message : String, text : String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
@@ -111,17 +127,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cpuButtonFlagChange()
         loadTableView()
         // Do any additional setup after loading the view.
     }
 
     @IBAction func timerStart(_ sender: Any) {
         Output_Alert(title: "알림", message: "타이머를 시작합니다.", text: "확인")
+        cpuButtonFlagChange()
         startTimer()
     }
     
     @IBAction func timerEnd(_ sender: Any) {
         Output_Alert(title: "알림", message: "타이머를 멈춥니다.", text: "확인")
+        cpuButtonFlagChange()
         timer?.invalidate()
         timer = nil
     }

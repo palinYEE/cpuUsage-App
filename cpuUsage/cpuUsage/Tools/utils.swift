@@ -14,7 +14,7 @@ let toastTagValue:Int = 1000
     우리는 이걸 toast message 라고 하기로 했어요.
  */
 func showToast(_ viewController:UIViewController, _ message: String, _ font: UIFont, _ width: Int) {
-    let toastLabel = UILabel(frame: CGRect(x: Int(viewController.view.frame.size.width)/2 - width/2, y: Int(viewController.view.frame.size.height) - 100, width: width, height: 35))
+    let toastLabel = UILabel(frame: CGRect(x: Int(viewController.view.frame.size.width)/2 - width/2, y: Int(viewController.view.frame.size.height) - 130, width: width, height: 35))
     toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
     toastLabel.textColor = UIColor.white
     toastLabel.font = font
