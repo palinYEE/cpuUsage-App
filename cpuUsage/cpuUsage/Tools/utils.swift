@@ -65,7 +65,8 @@ func getIpAddress() -> interfaceDatas? {
                     result.data.append(tmp)
                 }
             } else {    /* ipv6 */
-                let tmpIpv6: interfaceInfo = .init(ipv6: address,existIPv4: false, existIPv6: true)
+                let ipv6Address: String = String((address?.split(separator: "%")[0])!)
+                let tmpIpv6: interfaceInfo = .init(ipv6: ipv6Address,existIPv4: false, existIPv6: true)
                 if result.data.filter({ $0.interfaceName == name }).count > 0 {
                     result.data[result.data.firstIndex(where: {
                         $0.interfaceName == name
